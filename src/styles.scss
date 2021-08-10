@@ -1,0 +1,80 @@
+html, body, #app, .calculator {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #110f27;
+  font-family: monospace;
+}
+
+.calculator {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.display-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.display {
+  height: 170px;
+  line-height: 100px;
+  padding: 0 5% 0 5%;
+  color: #E18735;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.keyboard {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 0;
+
+  .keyboard-line {
+    height: 80px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    &:last-child {
+      .number {
+        flex: 2.01;
+      }
+    }
+  }
+}
+
+.button {
+  background: #211f42c2;
+  color: #6cacc5;
+  cursor: pointer;
+  font-size: 25px;
+  transition: all 0.3s;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:active {
+    box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.25);
+  }
+}
+
+.result, .operator {
+  background-color: #1d1a40;
+}
+
+.clear, .backspace, .toggle-sign {
+  background-color: #2f2d484a;
+}
